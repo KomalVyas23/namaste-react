@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Lets learn React JS",
   "scripts": {
-    "start": "npm run index.js",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "Jest"
   },
   "repository": {

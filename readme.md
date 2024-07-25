@@ -71,3 +71,24 @@ We don't have to put node_modules, dist, parcel-cache into git
 # browserslist
 
 With These things, we have created our own create-react-app
+
+
+# Chapter 3
+JSX - HTML like syntax
+
+Is JSX pure JS?
+No, Because JS Engine can't read this code.
+
+JSX => Transpiled before it reaches JS Engine (Parcel handles this job to Babel) => JS Engine understandable code.
+
+Babel is a transpiler.
+
+# //React.createElement => Object => HTML Element(render)
+# //JSX => React.createElement => Object => HTML Element(render)
+
+- JSX attributes follow camel case
+- class becomes className in JSX
+- If we are writing JSX in multiple line, we must use ()
+- We can write JS expression inside {} in JSX
+- JSX even sanitizes the data.
+

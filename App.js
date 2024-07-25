@@ -1,34 +1,29 @@
-/**
- * 
- * <div id="parent">
- *  <div id="child">
- *  <h1>I am h1!</h1>
- * <h2>I am h2!</h2>
- * </div>
- * </div>
- * 
- */
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", {id: "heading"}, "Hello World From React!");
-//console.log(heading); //Returns an Object
-
-//Nested Element
-const parent = React.createElement("div", {id:"parent"},
-    React.createElement("div",{id:"child"},
-        [React.createElement("h1", {}, "I am h1!"),
-            React.createElement("h2", {}, "I am h2!")]
-    )
+const Title = () => (
+    <h1 className="head" tabIndex="5">
+        Namaste React using JSX!
+    </h1>
 );
 
-//Above code is bit complex,
-// JSX will simplify it.
-// But, React is also possible without JSX.
-console.log(parent);
+const number = 10000;
+
+// Component Composition: You can put one component into another component
+const HeadingComponent = () => (
+    <div id="container">
+        <Title />
+        {Title()}
+        <h2>{number}</h2>
+        <h1 className="heading">Namaste React Functional component!</h1>
+    </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-// The function of render method is to convert the heading object into h1 element 
-//and show that into the browser
+
+root.render(<HeadingComponent />);
+
+
+
+
+
